@@ -5,15 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="style.css">
-  <script src="game.js"></script>
+  <script src="./game.js" defer></script>
 </head>
 <body>
   <div class="header">
-    <h1 class="heading">Rock Paper Scissor Game</h1>
+    <h1 class="heading">Rock Paper Scissors</h1>
   </div>
   <div class="instructions">
-    <h3>Press Ctrl + Shift + J to check your score</h3>
+    <h3></h3>
   </div>
-
+  <div class="selection">
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissor">Scissor</button>
+  </div>
+  <div class="result">
+    <h3 class="round">Choose your weapon to get started</h3>
+    <p class="compChoice"></p>
+    <p class="roundEnd"></p>
+    <p class="gameOver"></p>
+  </div>
+  <div class="score">
+    <h2>Score Card</h2>
+    <p class="wins">Your Score : 0</p>
+    <p class="compWins">Computer's Score : 0</p>
+    <p class="drawCount">Draws: 0</p>
+    <p class="outcome"></p>
+  </div>
 </body>
 </html>
