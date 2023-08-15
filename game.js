@@ -1,6 +1,6 @@
 
 //Query Selectors as global variables
-const content = document.querySelector('p');
+const content = document.querySelector('.compChoice');
 const roundNum = document.querySelector('.round');
 const result = document.querySelector('.result');
 const roundEnd = document.querySelector('.roundEnd');
@@ -9,6 +9,8 @@ const wins = document.querySelector('.wins');
 const compWins = document.querySelector('.compWins');
 const drawCount = document.querySelector('.drawCount');
 const gameOutcome = document.querySelector('.outcome');
+const playerChoice = document.querySelector('.player');
+const compChoice = document.querySelector('.comp');
 
 //Global Variables 
 let computerSelection;
@@ -43,6 +45,8 @@ scissor.addEventListener('click', () => {
 function play(playerSelection) {
   if (round <= 5) {
     eachRound(playerSelection);
+    playerChoice.src = sourcestr(playerSelection);
+    playerChoice.alt = playerSelection;
   }
 }
 
@@ -92,6 +96,7 @@ function playRound (playerSelection, computerSelection) {
   return num;
 }
 
+
 //plays each round and updates the global variable
 function eachRound(playerSelection) {
   //get computer's choice
@@ -102,11 +107,9 @@ function eachRound(playerSelection) {
     roundNum.textContent = `Round ${round}`;
   }
 
-  computerChoice = `Computer's Choice : ${computerSelection}`;
-  content.textContent = computerChoice;
-
+  compChoice.alt = computerSelection
   computerSelection = computerSelection.toLowerCase();
-  
+  compChoice.src = sourcestr(computerSelection)
   //getting result of round & getting output
   num = playRound(playerSelection, computerSelection);
   switch (num) {
@@ -141,3 +144,16 @@ function eachRound(playerSelection) {
   }
   round++;
 };
+
+
+function sourcestr(selection) {
+  let outstring;
+  if (selection == 'rock') {
+    outstring = './img/rock-white.png';
+  } else if (selection == 'paper') {
+    outstring = './img/paper-white.png';
+  } else {
+    outstring = './img/scissor-white.png';
+  }
+  return outstring;
+}
