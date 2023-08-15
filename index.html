@@ -9,27 +9,40 @@
 </head>
 <body>
   <div class="header">
+    <h3 class="name">Ismail<br>Silat</h3>
+  </div>
+  <div class="title">
     <h1 class="heading">Rock Paper Scissors</h1>
   </div>
   <div class="instructions">
     <h3></h3>
   </div>
+  <div class="score">
+    <h3 class="round">Choose your weapon to get started</h3>
+    <div class="counters">
+      <span class="wins">Your Score : 0</span>
+      <span class="compWins">Computer's Score : 0</span>
+      <span class="drawCount">Draws: 0</span>
+      <p class="roundEnd"></p>
+      <p class="gameOver"></p>
+    </div>
+  </div>
+  <div class="choice">
+    <div>
+      <img src="./img/nochoice-white.png" alt="No Choice" class="comp">
+      <p class="compChoice"> Computer's Choice</p>
+    </div>
+    <div>
+      <img src="./img/nochoice-white.png" alt="No Choice" class="player">
+      <p class="playerChoice">Your Choice</p>
+    </div>
+  </div>
   <div class="selection">
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissor">Scissor</button>
+    <button class="rock"><img src="./img/rock-white.png" alt="Rock"></button>
+    <button class="paper"><img src="./img/paper-white.png" alt="Paper"></button>
+    <button class="scissor"><img src="./img/scissor-white.png" alt="Scissors"></button>
   </div>
   <div class="result">
-    <h3 class="round">Choose your weapon to get started</h3>
-    <p class="compChoice"></p>
-    <p class="roundEnd"></p>
-    <p class="gameOver"></p>
-  </div>
-  <div class="score">
-    <h2>Score Card</h2>
-    <p class="wins">Your Score : 0</p>
-    <p class="compWins">Computer's Score : 0</p>
-    <p class="drawCount">Draws: 0</p>
     <p class="outcome"></p>
   </div>
 </body>
