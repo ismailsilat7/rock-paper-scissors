@@ -45,7 +45,7 @@ img {
   width: 100px;
   border-radius: 8px;
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   img {
     width: 80px;
   }
