@@ -47,10 +47,16 @@ img {
 }
 @media (max-width: 425px) {
   img {
-    width: 50px;
+    width: 80px;
   }
   .score {
     text-align: center;
+  }
+  body {
+    text-align: center;
+  }
+  .title {
+    font-size: 25px;
   }
 }
 
@@ -72,7 +78,6 @@ span {
 
 .choice {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
 }
