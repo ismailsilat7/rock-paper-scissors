@@ -11,6 +11,7 @@ const drawCount = document.querySelector('.drawCount');
 const gameOutcome = document.querySelector('.outcome');
 const playerChoice = document.querySelector('.player');
 const compChoice = document.querySelector('.comp');
+const selection = document.querySelector('.selection');
 
 //Global Variables 
 let computerSelection;
@@ -48,7 +49,7 @@ function play(playerSelection) {
     playerChoice.src = sourcestr(playerSelection);
     playerChoice.alt = playerSelection;
   }
-}
+};
 
 
 // To get computer's choice
@@ -131,18 +132,24 @@ function eachRound(playerSelection) {
   roundEnd.textContent = outstring;
 
   if (round >= 5) {
-    gameOver.textContent = "Game Over!"
     let outcome;
+    let audio;
     if (playerWins > computerWins) {
-      outcome = "Congrats! You Win"
+      outcome = "Congrats! You Win";
+      audio = document.querySelector('.game-win');
     } else if (playerWins < computerWins) {
       outcome = "You Lose"
+      audio = document.querySelector('.you-lose');
     } else {
-      outcome = "This game is a draw"
+      outcome = "This game is a draw";
+      audio = document.querySelector('.game-over')
     }
     gameOutcome.textContent = outcome;
+    audio.currentTime = 0;
+    audio.play();
   }
   round++;
+  console.log(round);
 };
 
 
@@ -157,3 +164,12 @@ function sourcestr(selection) {
   }
   return outstring;
 }
+
+selection.addEventListener('click', () => {
+  if (round <= 5) {
+  const audio = document.querySelector('.tink');
+  audio.currentTime = 0;
+  audio.play();
+  }
+});
+
