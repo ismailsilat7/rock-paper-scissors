@@ -8,9 +8,6 @@
   <script src="./game.js" defer></script>
 </head>
 <body>
-  <div class="header">
-    <h3 class="name">Ismail<br>Silat</h3>
-  </div>
   <div class="title">
     <h1 class="heading">Rock Paper Scissors</h1>
   </div>
@@ -23,27 +20,30 @@
       <span class="wins">Your Score : 0</span>
       <span class="compWins">Computer's Score : 0</span>
       <span class="drawCount">Draws: 0</span>
-      <p class="roundEnd"></p>
-      <p class="gameOver"></p>
     </div>
+    <p class="roundEnd"></p>
   </div>
   <div class="choice">
-    <div>
-      <img src="./img/nochoice-white.png" alt="No Choice" class="comp">
-      <p class="compChoice"> Computer's Choice</p>
-    </div>
     <div>
       <img src="./img/nochoice-white.png" alt="No Choice" class="player">
       <p class="playerChoice">Your Choice</p>
     </div>
+    <div>
+      <img src="./img/nochoice-white.png" alt="No Choice" class="comp">
+      <p class="compChoice"> Computer's Choice</p>
+    </div>
   </div>
   <div class="selection">
-    <button class="rock"><img src="./img/rock-white.png" alt="Rock"></button>
-    <button class="paper"><img src="./img/paper-white.png" alt="Paper"></button>
-    <button class="scissor"><img src="./img/scissor-white.png" alt="Scissors"></button>
+    <button class="rock sound"><img src="./img/rock-white.png" alt="Rock"></button>
+    <button class="paper sound"><img src="./img/paper-white.png" alt="Paper"></button>
+    <button class="scissor sound"><img src="./img/scissor-white.png" alt="Scissors"></button>
   </div>
   <div class="result">
     <p class="outcome"></p>
   </div>
+  <audio src="./sound/tink.wav" class="tink"></audio>
+  <audio src="./sound/game-win.wav" class="game-win"></audio>
+  <audio src="./sound/you-lose.mp3" class="you-lose"></audio>
+  <audio src="./sound/game-over.wav" class="game-over"></audio>
 </body>
 </html>
