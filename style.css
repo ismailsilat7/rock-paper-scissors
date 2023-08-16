@@ -1,0 +1,142 @@
+.heading {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(32, 32, 32);
+  color: white;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.round {
+  font-size: 26px;
+  padding-top: 15px;
+  margin-bottom: 2px;
+}
+
+.comp, .player {
+  background-color: black;
+  border: 3px solid rgb(0, 0, 0);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+
+img {
+  width: 100px;
+  border-radius: 8px;
+}
+@media (max-width: 425px) {
+  img {
+    width: 50px;
+  }
+  .score {
+    text-align: center;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -20px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span {
+  margin: 0 10px;
+}
+
+.choice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.choice > div, .selection > button {
+  margin: 20px 40px;
+}
+
+.selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.selection > button, button > img {
+  background-color: rgb(105, 103, 103);
+  border-color: rgb(160, 157, 157);
+  border-radius: 15px;
+}
+
+.selection > button:hover, button > img:hover {
+  background-color: black;
+  border-color: black;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.result > button {
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 8px 24px;
+  color: #f9faf8;
+  max-width: max-content;
+  box-shadow: 2px 2px 5px rgba(163, 162, 162, 0.3);
+}
+
+.result > button:hover {
+  background-color: rgb(105, 103, 103);
+  border-color: rgb(160, 157, 157);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.restartLink {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.counters {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer {
+  color: #f9faf8;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
