@@ -51,12 +51,14 @@ img {
   }
   .score {
     text-align: center;
+    padding: 10px;
   }
   body {
     text-align: center;
   }
   .title {
     font-size: 25px;
+    padding: 10px;
   }
 }
 
