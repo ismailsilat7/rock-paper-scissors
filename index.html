@@ -6,44 +6,49 @@
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="style.css">
   <script src="./game.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="title">
-    <h1 class="heading">Rock Paper Scissors</h1>
-  </div>
-  <div class="instructions">
-    <h3></h3>
-  </div>
-  <div class="score">
-    <h3 class="round">Choose your weapon to get started</h3>
-    <div class="counters">
-      <span class="wins">Your Score : 0</span>
-      <span class="compWins">Computer's Score : 0</span>
-      <span class="drawCount">Draws: 0</span>
+  <div class="wrapper">
+    <div class="content">
+      <div class="title">
+        <h1 class="heading">Rock Paper Scissors</h1>
+      </div>
+      <div class="score">
+        <h3 class="round">Choose your weapon to get started</h3>
+        <p class="roundEnd"></p>
+        <div class="counters">
+          <span class="wins">Your Score : 0</span>
+          <span class="compWins">Computer's Score : 0</span>
+          <span class="drawCount">Draws: 0</span>
+        </div>
+      </div>
+      <div class="choice">
+        <div>
+          <img src="./img/nochoice-white.png" alt="No Choice" class="player">
+          <p class="playerChoice">Your Choice</p>
+        </div>
+        <div>
+          <img src="./img/nochoice-white.png" alt="No Choice" class="comp">
+          <p class="compChoice"> Computer's Choice</p>
+        </div>
+      </div>
+      <div class="selection">
+        <button class="rock sound"><img src="./img/rock-white.png" alt="Rock"></button>
+        <button class="paper sound"><img src="./img/paper-white.png" alt="Paper"></button>
+        <button class="scissor sound"><img src="./img/scissor-white.png" alt="Scissors"></button>
+      </div>
+      <div class="result">
+        <h2 class="outcome"></h2>
+        <button class="restart"><a href="./index.html" class="restartLink">Restart</a></button>
+      </div>
     </div>
-    <p class="roundEnd"></p>
+    <audio src="./sound/tink.wav" class="tink"></audio>
+    <audio src="./sound/game-win.wav" class="game-win"></audio>
+    <audio src="./sound/you-lose.wav" class="you-lose"></audio>
+    <audio src="./sound/game-over.wav" class="game-over"></audio>
+    <div class="footer"><p>Project by Ismail Silat</p></div>
   </div>
-  <div class="choice">
-    <div>
-      <img src="./img/nochoice-white.png" alt="No Choice" class="player">
-      <p class="playerChoice">Your Choice</p>
-    </div>
-    <div>
-      <img src="./img/nochoice-white.png" alt="No Choice" class="comp">
-      <p class="compChoice"> Computer's Choice</p>
-    </div>
-  </div>
-  <div class="selection">
-    <button class="rock sound"><img src="./img/rock-white.png" alt="Rock"></button>
-    <button class="paper sound"><img src="./img/paper-white.png" alt="Paper"></button>
-    <button class="scissor sound"><img src="./img/scissor-white.png" alt="Scissors"></button>
-  </div>
-  <div class="result">
-    <p class="outcome"></p>
-  </div>
-  <audio src="./sound/tink.wav" class="tink"></audio>
-  <audio src="./sound/game-win.wav" class="game-win"></audio>
-  <audio src="./sound/you-lose.mp3" class="you-lose"></audio>
-  <audio src="./sound/game-over.wav" class="game-over"></audio>
 </body>
 </html>
