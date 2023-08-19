@@ -8,6 +8,7 @@
   <script src="./game.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./img/icon.png" type="image/png">
 </head>
 <body>
   <div class="wrapper">
@@ -21,16 +22,16 @@
         <div class="counters">
           <span class="wins">Your Score : 0</span>
           <span class="compWins">Computer's Score : 0</span>
-          <span class="drawCount">Draws: 0</span>
+          <span class="drawCount">Draws : 0</span>
         </div>
       </div>
       <div class="choice">
         <div>
-          <img src="./img/nochoice-white.png" alt="No Choice" class="player">
+          <img src="./img/user.png" alt="comp" class="player">
           <p class="playerChoice">Your Choice</p>
         </div>
         <div>
-          <img src="./img/nochoice-white.png" alt="No Choice" class="comp">
+          <img src="./img/comp.png" alt="user" class="comp">
           <p class="compChoice"> Computer's Choice</p>
         </div>
       </div>
@@ -41,7 +42,7 @@
       </div>
       <div class="result">
         <h2 class="outcome"></h2>
-        <button class="restart"><a href="./index.html" class="restartLink">Restart</a></button>
+        <button class="restart">Restart</button>
       </div>
     </div>
     <audio src="./sound/tink.wav" class="tink"></audio>
