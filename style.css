@@ -1,14 +1,13 @@
-.heading {
+body {
   font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  background-color: rgb(32, 32, 32);
+  background-color: rgb(0, 0, 0);
   color: white;
   min-height: 100vh;
 }
@@ -37,13 +36,11 @@ body {
 
 .comp, .player {
   background-color: black;
-  border: 3px solid rgb(0, 0, 0);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
-}
-
-img {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   width: 100px;
-  border-radius: 8px;
 }
 @media (max-width: 500px) {
   img {
@@ -94,15 +91,25 @@ span {
   justify-content: center;
 }
 
-.selection > button, button > img {
-  background-color: rgb(105, 103, 103);
-  border-color: rgb(160, 157, 157);
-  border-radius: 15px;
+.selection > button {
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 10px;
+  border: 2px solid rgb(255, 255, 255);
 }
 
-.selection > button:hover, button > img:hover {
+.selection > button:hover {
   background-color: black;
-  border-color: black;
+  border-color: white;
+}
+
+button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.selection > button > img {
+  width: 100px;
 }
 
 .result {
@@ -114,25 +121,23 @@ span {
 }
 
 .result > button {
-  background-color: black;
-  border: 2px solid black;
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid white;
   padding: 8px 24px;
-  color: #f9faf8;
+  font-size: 18px;
+  color: black;
   max-width: max-content;
-  box-shadow: 2px 2px 5px rgba(163, 162, 162, 0.3);
 }
 
 .result > button:hover {
-  background-color: rgb(105, 103, 103);
-  border-color: rgb(160, 157, 157);
+  background-color: black;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
-.restartLink {
-  text-decoration: none;
+.restartLink:hover {
   color: white;
-  font-size: 18px;
 }
 
 .counters {
