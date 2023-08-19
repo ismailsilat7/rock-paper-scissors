@@ -24,6 +24,13 @@ body {
   flex: 1;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
 /* Title styling */
 .title {
   font-size: 30px;
@@ -31,8 +38,68 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center; /* Center align the title text */
-  margin: 20px; /* Slightly increased spacing from elements below */
 }
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#nameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#name {
+  width: 250px;
+}
+
+.submit {
+  color: white;
+  background-color: black;
+  border-color: white;
+  border-radius: 2px;
+  border: 2px solid white;
+  padding: 8px 24px;
+  font-size: 25px;
+  max-width: max-content;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.form-content > h1 {
+  font-size: 35px;
+}
+
+.submit:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer; /* Change cursor on hover for better UX */
+  transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+#nameForm > input {
+  font-size: 50px;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  border: solid 2px rgb(0, 0, 0);
+  padding: 1px 15px;
+  margin: 25px;
+  width: 500px;
+  text-align: center;
+}
+
+#nameForm > input:focus {
+  outline: none;
+  border: solid 2px rgb(255, 255, 255);
+  box-shadow: 0 0 8px 3px rgb(136, 136, 136);
+  transition: all ease 0.2s;
+}
+
 
 /* Round information */
 .round {
@@ -54,24 +121,6 @@ body {
   border-radius: 50%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   width: 100px;
-}
-
-/* Responsive styling for small screens */
-@media (max-width: 500px) {
-  img {
-    width: 80px;
-  }
-  .score {
-    text-align: center;
-    padding: 10px;
-  }
-  body {
-    text-align: center;
-  }
-  .title {
-    font-size: 25px;
-    padding: 10px;
-  }
 }
 
 /* Styling for score display */
@@ -102,6 +151,7 @@ span {
   border-radius: 50%;
   padding: 10px;
   border: 2px solid rgb(255, 255, 255);
+  transition: all 0.3s ease;
 }
 
 .selection > button:hover {
@@ -133,12 +183,14 @@ span {
   font-size: 18px;
   color: black;
   max-width: max-content;
+  transition: all 0.3s ease;
 }
 
 .result > button:hover {
   background-color: black;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   color: white;
+  transform: scale(1.2);
 }
 
 /* Styling for restart link */
@@ -159,4 +211,31 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 500px) {
+  .comp, .player {
+    width: 80px;
+  }
+  .score {
+    text-align: center;
+    padding: 10px;
+  }
+  body {
+    text-align: center;
+  }
+  .title {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .selection {
+    flex-wrap: wrap;
+  }
+  .selection > button {
+    padding: 5px;
+  }
+  .selection > button > img {
+    width: 90px;
+  }
 }
