@@ -51,9 +51,7 @@ reset.addEventListener('click', () => {
 
 selection.addEventListener('click', () => {
   if (round <= 5) {
-    const audio = document.querySelector('.tink');
-    audio.currentTime = 0;
-    audio.play();
+    playTink();
   }
 });
 
@@ -182,6 +180,7 @@ function restart() {
 submit.addEventListener('click', (e) => {
   e.preventDefault();
   player.textContent = userName.value.toUpperCase();
+  playTink();
   scrollToGame();
 });
 
@@ -198,9 +197,17 @@ const closePopupButton = document.getElementById('close-popup');
 // Event Listener to open the instructions popup
 instructionButton.addEventListener('click', () => {
   instructionsPopup.style.display = 'flex';
+  playTink();
 });
 
 // Event Listener to close the instructions popup
 closePopupButton.addEventListener('click', () => {
   instructionsPopup.style.display = 'none';
 });
+
+// Function to play tink sound
+function playTink() {
+  const audio = document.querySelector('.tink');
+  audio.currentTime = 0;
+  audio.play();
+}
