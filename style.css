@@ -34,6 +34,10 @@ body {
   margin-bottom: 2px;
 }
 
+.roundEnd {
+  font-size: 20px;
+}
+
 .comp, .player {
   background-color: black;
   border: 2px solid rgb(255, 255, 255);
