@@ -15,6 +15,9 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissor = document.querySelector('.scissor');
 const reset = document.querySelector('.restart');
+const userName = document.querySelector('#name');
+const submit = document.querySelector('.submit');
+const player = document.querySelector('.playerChoice');
 
 // Global Variables
 let computerSelection;
@@ -176,3 +179,13 @@ function restart() {
   compChoice.alt = 'comp';
 }
 
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+  player.textContent = userName.value.toUpperCase();
+  scrollToGame();
+});
+
+function scrollToGame() {
+  const target = document.getElementById('game');
+  target.scrollIntoView({ behavior: 'smooth' });
+}
