@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  
+  <!-- Link to your CSS file -->
   <link rel="stylesheet" href="style.css">
-  <script src="./game.js" defer></script>
+
+  <!-- Load external fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
   <link rel="icon" href="./img/icon.png" type="image/png">
+  
+  <!-- Defer loading of JavaScript for better performance -->
+  <script src="./game.js" defer></script>
 </head>
 <body>
   <div class="wrapper">
@@ -32,10 +40,11 @@
         </div>
         <div>
           <img src="./img/comp.png" alt="user" class="comp">
-          <p class="compChoice"> Computer's Choice</p>
+          <p class="compChoice">Computer's Choice</p>
         </div>
       </div>
       <div class="selection">
+        <!-- Buttons for selecting game choices -->
         <button class="rock sound"><img src="./img/rock-white.png" alt="Rock"></button>
         <button class="paper sound"><img src="./img/paper-white.png" alt="Paper"></button>
         <button class="scissor sound"><img src="./img/scissor-white.png" alt="Scissors"></button>
@@ -45,11 +54,16 @@
         <button class="restart">Restart</button>
       </div>
     </div>
+    
+    <!-- Audio elements for game sounds -->
     <audio src="./sound/tink.wav" class="tink"></audio>
     <audio src="./sound/game-win.wav" class="game-win"></audio>
     <audio src="./sound/you-lose.wav" class="you-lose"></audio>
     <audio src="./sound/game-over.wav" class="game-over"></audio>
-    <div class="footer"><p>Project by Ismail Silat</p></div>
+    
+    <div class="footer">
+      <p>Project by Ismail Silat</p>
+    </div>
   </div>
 </body>
 </html>
