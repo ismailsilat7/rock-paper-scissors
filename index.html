@@ -19,6 +19,7 @@
   <script src="./game.js" defer></script>
 </head>
 <body>
+  <!-- Instructions Popup -->
   <button class="instruction-button">Instructions</button>
   <div class="popup-overlay" id="instructions-popup">
     <div class="popup-content">
@@ -38,8 +39,11 @@
       <p>Have fun and may the best player win!</p>
     </div>
   </div>
+  
+  <!-- Page Content -->
   <div class="wrapper">
     <div class="content">
+      <!-- Main Title and Name Entry -->
       <div class="main">
         <div class="title">
           <h1 class="heading">Rock Paper Scissors</h1>
@@ -52,6 +56,8 @@
           </form>
         </div>
       </div>
+      
+      <!-- Game Score and Choices -->
       <div class="score" id="game">
         <h3 class="round">Choose your weapon to get started</h3>
         <p class="roundEnd"></p>
@@ -61,6 +67,8 @@
           <span class="drawCount">Draws : 0</span>
         </div>
       </div>
+      
+      <!-- Player Choices -->
       <div class="choice">
         <div>
           <img src="./img/user.png" alt="comp" class="player">
@@ -71,12 +79,16 @@
           <p class="compChoice">AI</p>
         </div>
       </div>
+      
+      <!-- Game Choices -->
       <div class="selection">
         <!-- Buttons for selecting game choices -->
         <button class="rock sound"><img src="./img/rock-white.png" alt="Rock"></button>
         <button class="paper sound"><img src="./img/paper-white.png" alt="Paper"></button>
         <button class="scissor sound"><img src="./img/scissor-white.png" alt="Scissors"></button>
       </div>
+      
+      <!-- Game Outcome and Restart -->
       <div class="result">
         <h2 class="outcome"></h2>
         <button class="restart">Restart</button>
@@ -89,8 +101,9 @@
     <audio src="./sound/you-lose.wav" class="you-lose"></audio>
     <audio src="./sound/game-over.wav" class="game-over"></audio>
     
+    <!-- Footer -->
     <div class="footer">
-      <p>Copyright &copy Ismail Silat &middot The Odin Project 2023</p>
+      <p>Copyright &copy; Ismail Silat &middot; The Odin Project 2023</p>
     </div>
   </div>
 </body>
