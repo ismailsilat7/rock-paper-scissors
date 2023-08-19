@@ -190,7 +190,7 @@ function scrollToGame() {
   target.scrollIntoView({ behavior: 'smooth' });
 }
 
-// DOM Element Selection
+// DOM Element Selection (Instructions Popup)
 const instructionButton = document.querySelector('.instruction-button');
 const instructionsPopup = document.getElementById('instructions-popup');
 const closePopupButton = document.getElementById('close-popup');
