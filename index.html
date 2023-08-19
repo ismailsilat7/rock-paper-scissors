@@ -21,10 +21,19 @@
 <body>
   <div class="wrapper">
     <div class="content">
-      <div class="title">
-        <h1 class="heading">Rock Paper Scissors</h1>
+      <div class="main">
+        <div class="title">
+          <h1 class="heading">Rock Paper Scissors</h1>
+        </div>
+        <div class="form-content">
+          <h1>Please Enter Your First Name</h1>
+          <form id="nameForm">
+            <input type="text" id="name" required>
+            <button type="submit" class="submit">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="score">
+      <div class="score" id="game">
         <h3 class="round">Choose your weapon to get started</h3>
         <p class="roundEnd"></p>
         <div class="counters">
@@ -36,11 +45,11 @@
       <div class="choice">
         <div>
           <img src="./img/user.png" alt="comp" class="player">
-          <p class="playerChoice">Your Choice</p>
+          <p class="playerChoice">You</p>
         </div>
         <div>
           <img src="./img/comp.png" alt="user" class="comp">
-          <p class="compChoice">Computer's Choice</p>
+          <p class="compChoice">AI</p>
         </div>
       </div>
       <div class="selection">
