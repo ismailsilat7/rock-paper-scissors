@@ -42,6 +42,11 @@ scissor.addEventListener('click', () => {
   play(playerSelection);
 });
 
+const reset = document.querySelector('.restart');
+reset.addEventListener('click', () => {
+  restart();
+})
+
 //calls eachRound if condition is met
 function play(playerSelection) {
   if (round <= 5) {
@@ -50,7 +55,6 @@ function play(playerSelection) {
     playerChoice.alt = playerSelection;
   }
 };
-
 
 // To get computer's choice
 function getComputerChoice () {
@@ -152,17 +156,39 @@ function eachRound(playerSelection) {
   console.log(round);
 };
 
-
+//to change source of image
 function sourcestr(selection) {
   let outstring;
   if (selection == 'rock') {
     outstring = './img/rock-white.png';
   } else if (selection == 'paper') {
     outstring = './img/paper-white.png';
-  } else {
+  } else if (selection == 'scissor') {
     outstring = './img/scissor-white.png';
+  } else if (selection == 'user') {
+    outstring = './img/user.png';
+  } else if (selection == 'comp') {
+    outstring = './img/comp.png';
   }
   return outstring;
+}
+
+//to reset all values when default
+function restart() {
+  roundNum.textContent = "Choose your weapon to get started";
+  roundEnd.textContent = "";
+  playerWins = 0;
+  draws = 0;
+  computerWins = 0;
+  round = 1;
+  wins.textContent = "Your Score : 0";
+  compWins.textContent = "Computer's Score : 0";
+  drawCount.textContent = "Draws : 0";
+  gameOutcome.textContent = "";
+  playerChoice.src = sourcestr('user');
+  playerChoice.alt = 'user';
+  compChoice.src = sourcestr('comp');
+  playerChoice.alt = 'comp'
 }
 
 selection.addEventListener('click', () => {
