@@ -1,8 +1,6 @@
+/* Reset and basic styling */
 body {
   font-family: 'Montserrat', sans-serif;
-}
-
-body {
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,32 +10,40 @@ body {
   min-height: 100vh;
 }
 
+/* Wrapper for the entire content */
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Main content container */
 .content {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
+/* Title styling */
 .title {
   font-size: 30px;
+  text-align: center; /* Center align the title text */
+  margin-bottom: 20px; /* Slightly increased spacing from elements below */
 }
 
+/* Round information */
 .round {
   font-size: 26px;
   padding-top: 15px;
   margin-bottom: 2px;
 }
 
+/* Styling for round end messages */
 .roundEnd {
   font-size: 20px;
 }
 
+/* Styling for both computer and player choices */
 .comp, .player {
   background-color: black;
   border: 2px solid rgb(255, 255, 255);
@@ -46,6 +52,8 @@ body {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   width: 100px;
 }
+
+/* Responsive styling for small screens */
 @media (max-width: 500px) {
   img {
     width: 80px;
@@ -63,12 +71,7 @@ body {
   }
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: -20px;
-}
-
+/* Styling for score display */
 .score {
   display: flex;
   flex-direction: column;
@@ -79,7 +82,8 @@ span {
   margin: 0 10px;
 }
 
-.choice {
+/* Styling for choice buttons and container */
+.choice, .selection {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -89,12 +93,7 @@ span {
   margin: 20px 40px;
 }
 
-.selection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+/* Styling for choice buttons */
 .selection > button {
   background-color: rgb(0, 0, 0);
   border-radius: 50%;
@@ -105,17 +104,16 @@ span {
 .selection > button:hover {
   background-color: black;
   border-color: white;
+  cursor: pointer; /* Change cursor on hover for better UX */
+  transform: scale(1.2); /* Slightly increase size on hover */
 }
 
-button:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
+/* Styling for choice button images */
 .selection > button > img {
   width: 100px;
 }
 
+/* Styling for game result display */
 .result {
   display: flex;
   flex-direction: column;
@@ -140,15 +138,18 @@ button:hover {
   color: white;
 }
 
+/* Styling for restart link */
 .restartLink:hover {
   color: white;
 }
 
+/* Styling for game counters */
 .counters {
   font-weight: 600;
   margin-bottom: 20px;
 }
 
+/* Styling for the footer */
 .footer {
   color: #f9faf8;
   background-color: #000000;
