@@ -27,8 +27,11 @@ body {
 /* Title styling */
 .title {
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center; /* Center align the title text */
-  margin-bottom: 20px; /* Slightly increased spacing from elements below */
+  margin: 20px; /* Slightly increased spacing from elements below */
 }
 
 /* Round information */
