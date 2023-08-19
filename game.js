@@ -189,3 +189,18 @@ function scrollToGame() {
   const target = document.getElementById('game');
   target.scrollIntoView({ behavior: 'smooth' });
 }
+
+// DOM Element Selection
+const instructionButton = document.querySelector('.instruction-button');
+const instructionsPopup = document.getElementById('instructions-popup');
+const closePopupButton = document.getElementById('close-popup');
+
+// Event Listener to open the instructions popup
+instructionButton.addEventListener('click', () => {
+  instructionsPopup.style.display = 'flex';
+});
+
+// Event Listener to close the instructions popup
+closePopupButton.addEventListener('click', () => {
+  instructionsPopup.style.display = 'none';
+});
