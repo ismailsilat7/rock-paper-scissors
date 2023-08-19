@@ -18,6 +18,7 @@ const reset = document.querySelector('.restart');
 const userName = document.querySelector('#name');
 const submit = document.querySelector('.submit');
 const player = document.querySelector('.playerChoice');
+const choices = document.querySelectorAll('.sound')
 
 // Global Variables
 let computerSelection;
@@ -49,10 +50,12 @@ reset.addEventListener('click', () => {
   restart();
 });
 
-selection.addEventListener('click', () => {
-  if (round <= 5) {
-    playTink();
-  }
+choices.forEach(function(choice) {
+  choice.addEventListener('click', () => {
+    if (round <= 5) {
+      playTink();
+    }
+  })
 });
 
 // Function to play the game
